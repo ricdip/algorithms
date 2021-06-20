@@ -8,7 +8,7 @@ Both algorithms' pseudocodes were seen in the Web algorithms course at the Unive
 
 - **progr-dyn-knapsack**: pseudo-polynomial time complexity c
 
-    <img src="https://render.githubusercontent.com/render/math?math=c = O(n \cdot b)">
+    <img src="https://render.githubusercontent.com/render/math?bg_white&math=c = O(n \cdot b)">
 
     where:
     - n is the number of items
@@ -16,7 +16,7 @@ Both algorithms' pseudocodes were seen in the Web algorithms course at the Unive
 
 - **progr-dyn-knapsack-dual**: pseudo-polynomial time complexity c
 
-    <img src="https://render.githubusercontent.com/render/math?math=c = O(n^2 \cdot p_{max})">
+    <img src="https://render.githubusercontent.com/render/math?bg_white&math=c = O(n^2 \cdot p_{max})">
 
     where:
     - n is the number of items
