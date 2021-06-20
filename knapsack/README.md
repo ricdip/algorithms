@@ -6,17 +6,13 @@ Both algorithms' pseudocodes were seen in the Web algorithms course at the Unive
 
 ## Algorithms
 
-- **progr-dyn-knapsack**: pseudo-polynomial time complexity c
-
-    <img src="https://render.githubusercontent.com/render/math?bg_white&math=c = O(n \cdot b)">
+- **progr-dyn-knapsack**: pseudo-polynomial time complexity O(n * b)
 
     where:
     - n is the number of items
     - b is the total capacity of the knapsack
 
-- **progr-dyn-knapsack-dual**: pseudo-polynomial time complexity c
-
-    <img src="https://render.githubusercontent.com/render/math?bg_white&math=c = O(n^2 \cdot p_{max})">
+- **progr-dyn-knapsack-dual**: pseudo-polynomial time complexity O(n^2 * p_max)
 
     where:
     - n is the number of items
