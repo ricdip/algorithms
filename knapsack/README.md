@@ -6,17 +6,23 @@ The algorithms' pseudocodes were seen in the Web algorithms course at the Univer
 
 ## Algorithms
 
-- **progr-dyn-knapsack**: algorithm that solve the problem with the dynamic programming approach. It has a pseudo-polynomial time complexity O(n * b)
+- **progr-dyn-knapsack**: algorithm that solves the problem with the dynamic programming approach. It has a pseudo-polynomial time complexity O(n * b)
 
     where:
     - n is the number of items
     - b is the total capacity of the knapsack
 
-- **progr-dyn-knapsack-dual**: algorithm that solve the dual problem with the dynamic programming approach. It has a pseudo-polynomial time complexity O(n^2 * p_max)
+- **progr-dyn-knapsack-dual**: algorithm that solves the dual problem with the dynamic programming approach. It has a pseudo-polynomial time complexity O(n^2 * p_max)
 
     where:
     - n is the number of items
     - p_max is the maximum profit between all items
+
+- **FPTAS-knapsack**: approximation algorithm that scales the items' profits and runs the progr-dyn-knapsack-dual algorithm on the instance with scaled profits. It has a time complexity O(n^3 / epsilon) and its approximation is (1 - epsilon) [it returns always an (1 - epsilon) approximated solution]
+
+    where:
+    - n is the number of items
+    - epsilon is a number (0, 1]
 
 ## Requirements
 
