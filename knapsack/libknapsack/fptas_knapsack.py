@@ -34,6 +34,8 @@ class FPTASKnapsack:
 
     # scaling all items' profits: floor(p_i / k)
     def scale_O(self, O, k):
+        if k == 0:
+            raise RuntimeError("k = 0: it is not possible to run FPTAS-knapsack with this instance and epsilon")
         return {i: {"p": (math.floor(O[i]["p"] / k)), "w": O[i]["w"]} for i in O.keys()}
 
 
@@ -55,4 +57,5 @@ class FPTASKnapsack:
 
     def print_instance(self):
         print(" epsilon = {}".format(self.epsilon))
+        print(" k = {}".format(self.k))
         self.kd.print_instance()

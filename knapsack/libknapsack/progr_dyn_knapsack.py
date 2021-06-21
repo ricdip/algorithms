@@ -52,7 +52,11 @@ class Knapsack:
 			if tabbed:
 				print("\t", end='')
 			for j in range(0,self.b+1):
-				print(" {} ".format(self.M[i,j]), end='')
+                                if digits(self.M[i,j]) < 2:
+                                        print(" {}  ".format(self.M[i,j]), end='')
+                                else:
+				        # it's ok but if we have more than 2 digits it is surely unformatted
+                                        print(" {} ".format(self.M[i,j]), end='')
 			print()
 
 
@@ -62,3 +66,11 @@ class Knapsack:
 		print()
 		for k in self.O.keys():
 			print(" {} : {}".format(k, self.O[k]))
+
+
+def digits(num):
+	d = 0
+	while num > 0:
+		d = d + 1
+		num = num // 10
+	return d

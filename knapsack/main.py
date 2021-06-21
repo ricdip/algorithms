@@ -32,7 +32,7 @@ def main():
 	#knapsack.print_instance()
 	print()
 	print(' M:')
-	knapsack.print_matrix(tabbed=True)
+	knapsack.print_matrix(tabbed=False)
 	print()
 	print(' m = {}'.format(m_k))
 	print()
@@ -49,33 +49,36 @@ def main():
 	#print(" Knapsack instance:\n")
 	#knapsack_dual.print_instance()
 	print()
+	print(" p_max = {}".format(knapsack_dual.p_max))
+	print(" P = {}".format(knapsack_dual.P))
+	print()
 	print(' V:')
-	knapsack_dual.print_matrix(tabbed=True)
+	knapsack_dual.print_matrix(tabbed=False)
 	print()
 	print(' m = {}'.format(m_kd))
 	print()
 	print(' items in solution: {}'.format(items_kd))
 
 
-	#print("\n\n\n***** FPTAS-knapsack *****")
+	print("\n\n\n***** FPTAS-knapsack *****")
 	# calculate knapsack solution with FPTAS-knapsack: O(n^3 / epsilon) time complexity
 	# solution approximation: 1 - epsilon
-	#epsilon = 0.8
-	#fptas_knapsack = lk.FPTASKnapsack(O, n, b, epsilon)
+	epsilon = 0.8
+	fptas_knapsack = lk.FPTASKnapsack(O, n, b, epsilon)
 
-	#print()
-	#print(" Knapsack scaled instance:\n")
-	#fptas_knapsack.print_instance()
+	print()
+	print(" Knapsack scaled instance:\n")
+	fptas_knapsack.print_instance()
 
-	#items_fpk = fptas_knapsack.FPTAS_knapsack()
-	#m_fpk = fptas_knapsack.m
-	#print()
-	#print(' V:')
-	#fptas_knapsack.print_matrix(tabbed=True)
-	#print()
-	#print(' m = {}'.format(m_fpk))
-	#print()
-	#print(' items in solution: {}'.format(items_fpk))
+	items_fpk = fptas_knapsack.FPTAS_knapsack()
+	m_fpk = fptas_knapsack.m
+	print()
+	print(' V:')
+	fptas_knapsack.print_matrix(tabbed=False)
+	print()
+	print(' m = {}'.format(m_fpk))
+	print()
+	print(' items in solution: {}'.format(items_fpk))
 
 
 if __name__ == '__main__':
