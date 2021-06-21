@@ -18,7 +18,7 @@ The algorithms' pseudocodes were seen in the Web algorithms course at the Univer
     - n is the number of items
     - p_max is the maximum profit between all items
 
-- **FPTAS-knapsack**: approximation algorithm that scales the items' profits and runs the progr-dyn-knapsack-dual algorithm on the instance with scaled profits. It has a time complexity O(n^3 / epsilon) and its approximation is (1 - epsilon) [it returns always an (1 - epsilon) approximated solution]
+- **FPTAS-knapsack**: approximation algorithm (FPTAS) that scales the items' profits and runs the progr-dyn-knapsack-dual algorithm on the instance with scaled profits. It has a polynomial time complexity O(n^3 / epsilon) and its approximation is (1 - epsilon) [it returns always an (1 - epsilon) approximated solution]
 
     where:
     - n is the number of items
